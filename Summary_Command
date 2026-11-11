@@ -1,0 +1,20 @@
+PS C:\Users\USER> cd C:\Temp\
+PS C:\Temp> mkdir key
+PS C:\Temp> cd key
+PS C:\Temp\key> ssh-keygen -t ed25519 -f ./test
+PS C:\Temp\key> ls
+PS C:\Temp\key> cat test
+PS C:\Temp\key> git clone https://github.com/gsc-lab/async-key.git
+PS C:\Temp\key> cd .\async-key\
+PS C:\Temp\key\async-key> ls
+PS C:\Temp\key\async-key> python -m venv .venv
+PS C:\Temp\key\async-key> cd .\.venv\Scripts\
+PS C:\Temp\key\async-key\.venv\Scripts> .\activate
+(.venv) PS C:\Temp\key\async-key\.venv\Scripts> cd ..\..\
+(.venv) PS C:\Temp\key\async-key> cat .\requirements.txt
+cryptography
+(.venv) PS C:\Temp\key\async-key> python -m pip install --upgrade pip
+(.venv) PS C:\Temp\key\async-key> python -m pip install -r .\requirements.txt
+(.venv) PS C:\Temp\key\async-key> code .
+(.venv) PS C:\Temp\key\async-key> cd ..
+(.venv) PS C:\Temp\key> mv test* .\async-key\
